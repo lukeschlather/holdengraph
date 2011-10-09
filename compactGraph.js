@@ -144,8 +144,13 @@ function draw(){
 	    ctx.lineTo(canvas.width,canvas.height-graphPadding);
 	    ctx.stroke();
 
-	    // Insert the graph at the end of the document.
-	    document.childNodes[1].appendChild(canvas);
+
+	    if (graph.id) {
+		document.getElementById(graph.id).appendChild(canvas);
+	    } else {
+		// Insert the graph at the end of the document.
+		document.childNodes[1].appendChild(canvas);
+	    }
 	    
 	}
     }

@@ -30,8 +30,11 @@ function draw(){
   for (graphIndex=0;graphIndex<graphs.length;++graphIndex) {
     graph = graphs[graphIndex];
     var canvas = document.createElement('canvas');
-    document.childNodes[1].appendChild(canvas);
-
+    if (graph.id) {
+	document.getElementById(graph.id).appendChild(canvas);
+    } else {
+	document.childNodes[1].appendChild(canvas);
+    }
     if (canvas.getContext){
       canvas.setAttribute('id',graph.title);
       var ctx = canvas.getContext('2d');
