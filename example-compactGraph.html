@@ -2,6 +2,13 @@
 <html>  
   <head>  
     <title>Dante Boiler Temperature</title>  
+    <link type="image/png" rel="shortcut icon" href="/images/favicon.png" />
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="http://flinchbaughschlather.com/css/syntax.css" type="text/css" />
+
+    <!-- Homepage CSS -->
+    <link rel="stylesheet" href="http://flinchbaughschlather.com/css/screen.css" type="text/css" media="screen, projection" />
     <script type="text/javascript" src="compactGraph.js"></script> 
     <script type="text/javascript"> 
       graphs = [
@@ -10,6 +17,7 @@
       labelX: "Previous 24 hours",
       labelY: "Temperature",
       type: "tgraph",
+      id: "boilergraph",
       width: 600,
       height: 400,
       tempMin: 120,
@@ -21,12 +29,28 @@
       timeStep: 1,
       timeMarks: 12,
       data: [128.2,128.2,128.2,128.0,127.7,127.5,127.2,127.1,126.9,126.9,127.0,127.2,127.3,127.7,128.0,128.0,128.2,128.3,128.3,128.4,128.6,128.9,128.9,128.9,128.7,128.4,128.4,128.0,128.0,128.0,128.0,127.9,127.9,127.8,128.0,128.2,128.2,128.4,128.8,129.0,129.1,129.5,129.6,129.9,130.0,130.2,130.2,130.3,130.4,130.7,130.7,130.7,130.7,130.9,131.1,131.3,131.3,131.4,131.3,131.3,131.2,130.7,129.8,129.1,128.7,128.5,128.2,128.0,128.0,127.5,127.7,127.1,126.6,126.4,126.4,126.2,126.1,126.0,125.5,125.0,124.6,124.4,123.9,123.6,123.4,122.8,122.6,122.3,122.1,122.1,122.3,122.4,122.4,122.2,122.0,121.9,121.9,121.8,121.8,122.1,122.2,122.3,122.3,122.3,122.3,122.6,122.5,122.5,122.5,122.3,122.1,122.0,121.9,121.9,121.9,121.9,122.1,122.4,122.6,122.9,123.1,123.4,123.5,123.8,124.1,124.3,124.4,124.4,124.6,124.7,125.0,125.0,125.3,125.7,125.9,125.9,126.1,126.4,126.6,126.7,127.1,127.2,127.3,127.5,127.7,128.0,128.1,128.2,128.4,128.5,128.8,129.0,129.1,129.3,129.6,129.8,129.9,130.0,130.2,130.4,130.5,130.7,130.9,131.0,131.1,131.4,131.6,131.8,131.8,132.0,132.1,132.4,132.6,132.6,132.8,133.0,133.2,133.3,133.5,133.6,133.9,133.9,134.1,134.3,134.5,134.6,134.6,134.8,134.9,135.1,135.3,135.4,135.7,135.7,135.7,136.1,136.1,136.2,136.4,136.7,136.7,136.9,137.0,137.0,137.2,137.2,137.5,137.6,137.7,137.7,138.0,138.0,138.1,138.1,138.3,138.5,138.5,138.5,138.5,138.5,138.4,138.2,138.2,138.1,138.2,138.1,138.2,138.2,138.0,137.9,137.2,137.2,136.9,136.9,136.9,136.9,136.9,136.9,136.8,136.5,136.4,135.6,134.9,134.5,133.9,133.1,133.0,132.4,131.8,131.4,130.9,130.9,130.4,130.0,129.6,129.1,128.7,128.4,128.1,127.7,127.4,127.1,126.9,126.8,126.4,125.9,125.3,125.3,125.2,124.7,124.6,124.0,124.1,124.0,124.1,124.0,124.1,124.1,124.4,124.3,124.4,124.2,124.2,124.3,124.4,124.6,124.8,125.1]
-    } ];
+      } ];
     </script> 
   </head>  
   <body onload="draw();">  
-<H1>Dante Boiler Temperature</H1>
-<p> This is the temperature of one of Holden's hybrid Wood/Electric Boilers on a day in October. We still have plenty of power, so the temperature is governed by the load controller. During the night, overall electrical load decreases, so the system can dump more power into the heating elements (conveniently allowing us to heat better.)</p>
+    <div class="site">
+      <div class="title">
+	<a href="/">Luke jf Schlather</a>
+	<a class="extra" href="/">home</a>
+
+      </div>
+      
+      <div id="home">
+	<H1>Dante Boiler Temperature</H1>
+	<p> This is the temperature of one of Holden's hybrid Wood/Electric
+	  Boilers on a day in October. We still have plenty of power, so the
+	  temperature is governed by the load controller. During the night,
+	  overall electrical load decreases, so the system can dump more power
+	  into the heating elements (conveniently allowing us to heat
+	  better.)</p>
+      </div>
+      <div id="boilergraph"></div>
+    </div>
   </body>
 </html>
- 
+

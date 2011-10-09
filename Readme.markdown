@@ -5,5 +5,5 @@ The first one, compactGraph.js, was written in response to a request by Rich Wil
 
 The second one was written for a Twisted/Python monitoring daemon I put together to monitor the controllers and the load. I gradually realized I was reinventing Nagios, so I've moved most of the monitoring over to Nagios, but holdengraph.js is still an interesting tech demo.
 
-[example-holdengraph.js](example-holdengraph.js)
-[example-compactGraph.js](example-compactGraph.js)
+[example-holdengraph.js](http://schlather.info/example-holdengraph.js)
+[example-compactGraph.js](http://schlather.info/example-compactGraph.js)
