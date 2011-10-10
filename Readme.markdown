@@ -4,7 +4,11 @@ The first one, compactGraph.js, was written in response to a request by Rich Wil
 
 The second one was written for a Twisted/Python monitoring daemon I put together to monitor the controllers and the load. I gradually realized I was reinventing Nagios, so I've moved most of the monitoring over to Nagios, but holdengraph.js is still an interesting tech demo.
 
+The format for both of them is fairly simple and self explanatory. They consist of an associative array with some options about how you want the graph to display; maximum values, how many hash marks should be drawn on the axis, color, and so on. The graphs in holdengraph.js are designed to show some Y-values dependent on an X-value. It expects one array with all the X-values (in the example below, Unix timestamps) and then another array of associative arrays describing each of the Y-values, with their data.
 
-[example-holdengraph.js](http://schlather.info/holdengraph/example-holdengraph.html)
+An important thing about holdengraph.js is that you need to make sure that all of the data arrays have the same length. If the X-value array is differently sized from any of the Y-value arrays behavior is undefined.
 
-[example-compactGraph.js](http://schlather.info/holdengraph/example-compactGraph.html)
+
+[Example of holdengraph.js](http://schlather.info/holdengraph/example-holdengraph.html)
+
+[Example of compactGraph.js](http://schlather.info/holdengraph/example-compactGraph.html)
