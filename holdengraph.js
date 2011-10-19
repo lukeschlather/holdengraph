@@ -16,11 +16,12 @@ var graphContext =  {
     this.yMax = minY;
     this.offsetY = ((maxY-minY) * this.unitY);
   },
+  //parseInt inexplicably stops Firefox from hanging for 60+ seconds on the load controller graph.
   getX : function(value) {
-    return this.graphPadding + ((value-this.xMin)*this.unitX);
+    return parseInt(this.graphPadding + ((value-this.xMin)*this.unitX));
   },
   getY : function(value) {
-    return  (((value-this.yMin) *  this.unitY) - this.offsetY);
+    return  parseInt(((value-this.yMin) *  this.unitY) - this.offsetY);
   }
 }
 
