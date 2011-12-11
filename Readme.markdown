@@ -1,3 +1,7 @@
+[compactGraph.js example](http://schlather.info/holdengraph/example-compactGraph.html)
+
+[holdengraph.js example](http://schlather.info/holdengraph/example-holdengraph.html)
+
 This project has two JavaScript / HTML5 Canvas demoes that I put together to help in system monitoring at Holden Village. 
 
 The first one, compactGraph.js, was written in response to a request by Rich Wilson. There are about a dozen Linux/ARM boards that control heating and electrical load throughout the village. Rich was looking for a way to generate graphs onboard, and because of the system constraints generating images was out of the question. However, the systems all have embedded webservers, so I gave him a format he could dump an array into representing the past day of temperatures at 5-minute intervals, and browsers could do the heavy lifting of actually drawing the graph. 
@@ -9,6 +13,3 @@ The format for both of them is fairly simple and self explanatory. They consist 
 An important thing about holdengraph.js is that you need to make sure that all of the data arrays have the same length. If the X-value array is differently sized from any of the Y-value arrays behavior is undefined.
 
 
-[Example of holdengraph.js](http://schlather.info/holdengraph/example-holdengraph.html)
-
-[Example of compactGraph.js](http://schlather.info/holdengraph/example-compactGraph.html)
